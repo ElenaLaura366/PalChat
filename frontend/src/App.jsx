@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useAuthStore } from "./store/useAuthStore.js";
 import { useEffect } from "react";
+import { Toaster } from "react-hot-toast";
 
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
@@ -50,6 +51,7 @@ const App = () => {
           element={authUser ? <ProfilePage /> : <Navigate to="/login" />}
         />
       </Routes>
+      <Toaster/>
     </div>
   );
 };
