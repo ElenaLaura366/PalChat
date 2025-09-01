@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <header
-      className="bg-base-100 border-b border-base-300 fixed w-full top-0 z-40 
+      className="bg-gray-950 fixed w-full top-0 z-40 
     backdrop-blur-lg"
     >
       <div className="container mx-auto px-4 h-16">
@@ -25,7 +25,10 @@ const Navbar = () => {
           <div className="flex items-center gap-2">
             {authUser && (
               <>
-                <Link to={"/profile"} className={`btn btn-sm gap-2`}>
+                <Link
+                  to={"/profile"}
+                  className={`btn btn-sm gap-2 bg-gray-950 border-0 shadow-none`}
+                >
                   <User className="size-5" />
                   <span className="hidden sm:inline">Profile</span>
                 </Link>

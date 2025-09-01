@@ -22,13 +22,12 @@ const Sidebar = () => {
   if (isUsersLoading) return <SidebarSkeleton />;
 
   return (
-    <aside className="h-full w-20 lg:w-72 border-r border-base-300 flex flex-col transition-all duration-200">
-      <div className="border-b border-base-300 w-full p-5">
+    <aside className="bg-slate-900 h-full w-20 lg:w-72 border-r border-base-100/50 flex flex-col transition-all duration-200">
+      <div className="border-b border-base-100/50 w-full p-5">
         <div className="flex items-center gap-2">
           <Users className="size-6" />
           <span className="font-medium hidden lg:block">Contacts</span>
         </div>
-        {/* TODO: Online filter toggle */}
         <div className="mt-3 hidden lg:flex items-center gap-2">
           <label className="cursor-pointer flex items-center gap-2">
             <input
@@ -52,10 +51,10 @@ const Sidebar = () => {
             onClick={() => setSelectedUser(user)}
             className={`
               w-full p-3 flex items-center gap-3
-              hover:bg-base-300 transition-colors
+              hover:bg-gray-800 transition-colors
               ${
                 selectedUser?._id === user._id
-                  ? "bg-base-300 ring-1 ring-base-300"
+                  ? "bg-gray-800 ring-1 ring-base-300"
                   : ""
               }
             `}

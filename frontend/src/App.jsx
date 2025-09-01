@@ -29,7 +29,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className="bg-gray-950">
       <Navbar />
       <Routes>
         <Route
